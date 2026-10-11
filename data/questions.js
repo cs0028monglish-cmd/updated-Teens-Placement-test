@@ -103,8 +103,8 @@ const DECISION = {
 /* ------------------------------ READING ------------------------------ */
 const READING = [
   // Tier 1 · Pre-A1 · Unlock Basic Skills (new items)
-  { lvl:1, obj:"classroom objects",        dok:1, sec:"Vocabulary", q:"📖  This is a ___.", o:["book","chair","door","apple"], a:0 },
-  { lvl:1, obj:"colours",                  dok:1, sec:"Vocabulary", q:"🌞  The sun is ___.", o:["blue","yellow","green","black"], a:1 },
+  { lvl:1, obj:"classroom objects",        dok:1, sec:"Vocabulary", img:"assets/reading/q-book.jpg", q:"This is a ___.", o:["book","chair","door","apple"], a:0 },
+  { lvl:1, obj:"colours",                  dok:1, sec:"Vocabulary", img:"assets/reading/q-sun.jpg", q:"The sun is ___.", o:["blue","yellow","green","black"], a:1 },
   { lvl:1, obj:"numbers 1-20",             dok:1, sec:"Vocabulary", q:"3 + 4 = ___", o:["six","eight","seven","four"], a:2 },
   { lvl:1, obj:"introducing yourself",     dok:1, sec:"Grammar",    q:"Hello! My ___ is Ali.", o:["name","old","from","is"], a:0 },
   { lvl:1, obj:"age",                      dok:1, sec:"Grammar",    q:"I am twelve years ___.", o:["name","big","age","old"], a:3 },
