@@ -106,7 +106,7 @@
     list.innerHTML = READING.map((q, i) => `
       <div class="q" id="rq${i}">
         <div class="qn">Question ${i + 1} of ${READING.length}</div>
-        <div class="qt">${esc(q.q)}</div>
+        ${q.img ? `<img class="q-img" src="${q.img}" alt="Picture for question ${i + 1}" loading="lazy">` : ""}<div class="qt">${esc(q.q)}</div>
         <div class="opts">${q.o.map((o, k) => `<label class="opt"><input type="radio" name="r${i}" value="${k}"><span>${String.fromCharCode(65 + k)}. ${esc(o)}</span></label>`).join("")}</div>
       </div>`).join("");
     S.rLast = Date.now(); startClock("reading");
