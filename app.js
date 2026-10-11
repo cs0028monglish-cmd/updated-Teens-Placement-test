@@ -78,7 +78,7 @@
     const order = ["reading", "listening", "writing", "speaking"];
     $("#steps").classList.toggle("hidden", id === "welcome");
     const cur = id === "break" ? 2 : id === "finish" ? 4 : order.indexOf(id);
-    $$(".step").forEach(st => {
+    $$("#steps [data-s]").forEach(st => {
       const i = order.indexOf(st.dataset.s);
       st.classList.toggle("on", i === cur); st.classList.toggle("done", i < cur);
     });
@@ -361,7 +361,7 @@
       <h2>Thank you${first ? ", " + esc(first) : ""}! &#127881;</h2>
       <p class="sub">You have finished all four parts. Your answers have been sent to the Monglish Academic Team, who will contact you about your class.</p>
       ${S.micFlagged ? '<div class="note warn">An examiner will contact you to complete the speaking part.</div>' : ""}
-      <h3 style="margin-top:14px;color:var(--navy)">Tips to keep improving</h3>
+      <h3 style="margin-top:14px;color:var(--orange-2)">Tips to keep improving</h3>
       <ul class="tips">${tips().map(x => `<li><span class="tip-skill">${esc(x.skill)}</span><span>${esc(x.t)}</span></li>`).join("")}</ul>
       <p class="sub" style="margin-top:14px">You may now close this window.</p>`;
     if (EXAMINER) { $("#examinerPanel").classList.remove("hidden"); buildExaminer(); }
